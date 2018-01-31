@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Enable Cors
-app.use(cors);
+//app.use(cors);
 
 app.use('/poll', poll);
 

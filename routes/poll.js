@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-require('dotenv').config();
-
 const Pusher = require('pusher');
 
+const config = require('../config');
+
 const pusher = new Pusher({
-  appId: process.env.APP_ID,
-  key: process.env.KEY,
-  secret: process.env.SECRET,
-  cluster: process.env.CLUSTER,
-  encrypted: process.env.ENCRYPTED
+  appId: config.APP_ID,
+  key: config.KEY,
+  secret: config.SECRET,
+  cluster: config.CLUSTER,
+  encrypted: config.ECRYPTED
 });
 
 router.get('/', (req, res) => {
